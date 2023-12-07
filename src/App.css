@@ -1,0 +1,91 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: url('./images/farlight.jpg') center center/cover no-repeat fixed;
+}
+
+.App {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: rgba(240, 240, 240, 0.8); /* Add a semi-transparent background color */
+}
+
+.login-form-container {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  width: 400px;
+  text-align: center;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  margin-top: 10px;
+  text-align: left;
+}
+
+input {
+  margin-bottom: 10px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+}
+
+button {
+  background-color: #007bff;
+  color: #ffffff;
+  padding: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 18px;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.facebook-button,
+.google-button {
+  background-color: #1877f2;
+  color: #ffffff;
+  padding: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.google-button {
+  background-color: #4285f4;
+}
+
+.facebook-button:hover,
+.google-button:hover {
+  opacity: 0.9;
+}
+
+.icon {
+  margin-right: 8px;
+}
+
+p {
+  margin-top: 10px;
+  text-align: center;
+}
