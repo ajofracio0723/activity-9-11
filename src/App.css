@@ -17,12 +17,26 @@ body {
 }
 
 .login-form-container {
-  background-color: #ffffff;
+  background-color: #3498db; /* Change background color */
   border-radius: 8px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); /* Add a stronger box shadow */
   padding: 40px;
   width: 400px;
   text-align: center;
+  position: relative; /* Add position relative for lighting effect */
+}
+
+/* Add lighting effect */
+.login-form-container::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  background: linear-gradient(45deg, #fff, #627248); /* Adjust gradient colors */
+  border-radius: 12px;
+  z-index: -1;
 }
 
 .login-form {
@@ -34,6 +48,7 @@ body {
 label {
   margin-top: 10px;
   text-align: left;
+  color: #fff; /* Text color */
 }
 
 input {
@@ -44,36 +59,35 @@ input {
   width: 100%;
 }
 
-button {
-  background-color: #007bff;
-  color: #ffffff;
-  padding: 14px;
+button,
+.facebook-button,
+.google-button {
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  font-size: 18px;
   width: 100%;
 }
 
+button {
+  background-color: #2ecc71; /* Change button color */
+  color: #ffffff;
+  padding: 14px;
+  font-size: 18px;
+}
+
 button:hover {
-  background-color: #0056b3;
+  background-color: #27ae60; /* Change button hover color */
 }
 
 .facebook-button,
 .google-button {
-  background-color: #1877f2;
-  color: #ffffff;
   padding: 14px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
   font-size: 16px;
   margin-top: 10px;
-  width: 100%;
 }
 
 .google-button {
-  background-color: #4285f4;
+  background-color: #e74c3c; /* Change Google button color */
 }
 
 .facebook-button:hover,
@@ -88,4 +102,5 @@ button:hover {
 p {
   margin-top: 10px;
   text-align: center;
+  color: #fff; /* Text color */
 }

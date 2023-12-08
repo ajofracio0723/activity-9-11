@@ -29,32 +29,69 @@ const LoginForm = () => {
     console.log('Logging in with Google');
   };
 
+  // Define your styles as an object
+  const containerStyle = {
+    backgroundColor: '#ffffff',
+    borderRadius: '8px',
+    boxShadow: '0 8px 16px rgba(0, 0, 0, 0.1), 0 12px 40px rgba(0, 0, 0, 0.15)',
+    padding: '40px',
+    width: '400px',
+    textAlign: 'center',
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    border: '2px solid #000',
+  };
+
+  const formStyle = {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+  };
+
+  const inputStyle = {
+    marginBottom: '10px',
+    padding: '12px',
+    border: '1px solid #ccc',
+    borderRadius: '4px',
+    width: '100%',
+  };
+
+  const buttonStyle = {
+    backgroundColor: '#007bff',
+    color: '#ffffff',
+    padding: '14px',
+    border: 'none',
+    borderRadius: '4px',
+    cursor: 'pointer',
+    fontSize: '18px',
+    width: '100%',
+  };
+
+  const linkButtonStyle = {
+    background: 'none',
+    border: 'none',
+    color: '#007bff',
+    cursor: 'pointer',
+    textDecoration: 'underline',
+    padding: 0,
+    font: 'inherit',
+  };
+
+  const socialButtonStyle = {
+    padding: '14px',
+    border: 'none',
+    borderRadius: '4px',
+    cursor: 'pointer',
+    fontSize: '16px',
+    marginTop: '10px',
+    width: '100%',
+  };
+
   return (
-    <div
-    className="login-form-container"
-    style={{
-      backgroundColor: '#ffffff',
-        borderRadius: '8px',
-        boxShadow: '0 8px 16px rgba(0, 0, 0, 0.1), 0 12px 40px rgba(0, 0, 0, 0.15)', // Increased box shadow
-        padding: '40px',
-        width: '400px',
-        textAlign: 'center',
-        position: 'absolute',
-        top: '50%',
-        left: '50%',
-        transform: 'translate(-50%, -50%)',
-        border: '2px solid #000', // Black border color
-      }}
-    >
-      <form
-        className="login-form"
-        onSubmit={handleSubmit}
-        style={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-        }}
-      >
+    <div className="login-form-container" style={containerStyle}>
+      <form className="login-form" onSubmit={handleSubmit} style={formStyle}>
         <h2 style={{ marginBottom: '20px', color: '#333' }}>Login</h2>
         <label htmlFor="email" style={{ textAlign: 'left', marginBottom: '10px' }}>
           Email:
@@ -65,13 +102,7 @@ const LoginForm = () => {
           value={email}
           onChange={handleEmailChange}
           required
-          style={{
-            marginBottom: '10px',
-            padding: '12px',
-            border: '1px solid #ccc',
-            borderRadius: '4px',
-            width: '100%',
-          }}
+          style={inputStyle}
         />
         <label htmlFor="password" style={{ textAlign: 'left', marginBottom: '10px' }}>
           Password:
@@ -82,27 +113,9 @@ const LoginForm = () => {
           value={password}
           onChange={handlePasswordChange}
           required
-          style={{
-            marginBottom: '10px',
-            padding: '12px',
-            border: '1px solid #ccc',
-            borderRadius: '4px',
-            width: '100%',
-          }}
+          style={inputStyle}
         />
-        <button
-          type="submit"
-          style={{
-            backgroundColor: '#007bff',
-            color: '#ffffff',
-            padding: '14px',
-            border: 'none',
-            borderRadius: '4px',
-            cursor: 'pointer',
-            fontSize: '18px',
-            width: '100%',
-          }}
-        >
+        <button type="submit" style={buttonStyle}>
           Login
         </button>
 
@@ -113,15 +126,7 @@ const LoginForm = () => {
             onClick={() => {
               console.log('Sign up button clicked');
             }}
-            style={{
-              background: 'none',
-              border: 'none',
-              color: '#007bff',
-              cursor: 'pointer',
-              textDecoration: 'underline',
-              padding: 0,
-              font: 'inherit',
-            }}
+            style={linkButtonStyle}
           >
             Sign up
           </button>
@@ -131,17 +136,7 @@ const LoginForm = () => {
           type="button"
           className="facebook-button"
           onClick={handleFacebookLogin}
-          style={{
-            backgroundColor: '#1877f2',
-            color: '#ffffff',
-            padding: '14px',
-            border: 'none',
-            borderRadius: '4px',
-            cursor: 'pointer',
-            fontSize: '16px',
-            marginTop: '10px',
-            width: '100%',
-          }}
+          style={{ ...socialButtonStyle, backgroundColor: '#1877f2', color: '#ffffff' }}
         >
           <FontAwesomeIcon icon={faFacebookF} className="icon" />
           Login with Facebook
@@ -151,17 +146,7 @@ const LoginForm = () => {
           type="button"
           className="google-button"
           onClick={handleGoogleLogin}
-          style={{
-            backgroundColor: '#4285f4',
-            color: '#ffffff',
-            padding: '14px',
-            border: 'none',
-            borderRadius: '4px',
-            cursor: 'pointer',
-            fontSize: '16px',
-            marginTop: '10px',
-            width: '100%',
-          }}
+          style={{ ...socialButtonStyle, backgroundColor: '#4285f4', color: '#ffffff' }}
         >
           <FontAwesomeIcon icon={faGoogle} className="icon" />
           Login with Google
