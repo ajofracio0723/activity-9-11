@@ -33,9 +33,9 @@ const LoginForm = () => {
   const containerStyle = {
     backgroundColor: '#ffffff',
     borderRadius: '8px',
-    boxShadow: '0 8px 16px rgba(0, 0, 0, 0.1), 0 12px 40px rgba(0, 0, 0, 0.15)',
-    padding: '40px',
-    width: '400px',
+    boxShadow: '0 8px 16px rgba(100, 100, 150, 150), 20px  12px 40px rgba(56,56, 70, 55)',
+    padding: '50px',
+    width: '350px', 
     textAlign: 'center',
     position: 'absolute',
     top: '50%',
